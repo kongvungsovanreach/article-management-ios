@@ -7,21 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FE0AFD8C80462C91133EEB6 /* Pods_ArticleManagementiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9B0327828700898A2CD8658 /* Pods_ArticleManagementiOS.framework */; };
+		608C50B121C5FA7600DCFFF2 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608C50AF21C5FA7600DCFFF2 /* CustomCell.swift */; };
+		608C50B221C5FA7600DCFFF2 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 608C50B021C5FA7600DCFFF2 /* CustomCell.xib */; };
+		6096A09A21C6A23500B12152 /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6096A09921C6A23500B12152 /* ArticleDetailViewController.swift */; };
 		60D665BA21C3B9B00062038C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D665B921C3B9B00062038C /* AppDelegate.swift */; };
 		60D665BC21C3B9B00062038C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D665BB21C3B9B00062038C /* ViewController.swift */; };
 		60D665BF21C3B9B00062038C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60D665BD21C3B9B00062038C /* Main.storyboard */; };
-		60D665C121C3B9B10062038C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60D665C021C3B9B10062038C /* Assets.xcassets */; };
 		60D665C421C3B9B10062038C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60D665C221C3B9B10062038C /* LaunchScreen.storyboard */; };
+		60D8402B21C6579800D2E90C /* UpdateArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D8402A21C6579800D2E90C /* UpdateArticleViewController.swift */; };
+		60D8402D21C65AF300D2E90C /* AddArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D8402C21C65AF300D2E90C /* AddArticleViewController.swift */; };
+		60E8F6CB21C5FCD100E1C674 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60E8F6CA21C5FCD100E1C674 /* Assets.xcassets */; };
+		60E8F6CD21C5FE5800E1C674 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 60E8F6CC21C5FE5800E1C674 /* fontawesome-webfont.ttf */; };
+		60E8F6CF21C60BC600E1C674 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E8F6CE21C60BC600E1C674 /* Article.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3988194B8A6337F9F41F74DF /* Pods-ArticleManagementiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArticleManagementiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArticleManagementiOS/Pods-ArticleManagementiOS.debug.xcconfig"; sourceTree = "<group>"; };
+		53FFF13185F0680E862A405B /* Pods-ArticleManagementiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArticleManagementiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-ArticleManagementiOS/Pods-ArticleManagementiOS.release.xcconfig"; sourceTree = "<group>"; };
+		608C50AF21C5FA7600DCFFF2 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		608C50B021C5FA7600DCFFF2 /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		6096A09921C6A23500B12152 /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
 		60D665B621C3B9B00062038C /* ArticleManagementiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArticleManagementiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60D665B921C3B9B00062038C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60D665BB21C3B9B00062038C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		60D665BE21C3B9B00062038C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		60D665C021C3B9B10062038C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60D665C321C3B9B10062038C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60D665C521C3B9B10062038C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60D8402A21C6579800D2E90C /* UpdateArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateArticleViewController.swift; sourceTree = "<group>"; };
+		60D8402C21C65AF300D2E90C /* AddArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddArticleViewController.swift; sourceTree = "<group>"; };
+		60E8F6CA21C5FCD100E1C674 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		60E8F6CC21C5FE5800E1C674 /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
+		60E8F6CE21C60BC600E1C674 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		F9B0327828700898A2CD8658 /* Pods_ArticleManagementiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArticleManagementiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +47,75 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FE0AFD8C80462C91133EEB6 /* Pods_ArticleManagementiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D99262E437AE7E4B8F39BB2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F9B0327828700898A2CD8658 /* Pods_ArticleManagementiOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		608C50AA21C5F99400DCFFF2 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				60E8F6CE21C60BC600E1C674 /* Article.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		608C50AB21C5F99B00DCFFF2 /* viewController */ = {
+			isa = PBXGroup;
+			children = (
+				60D665BB21C3B9B00062038C /* ViewController.swift */,
+				60D8402A21C6579800D2E90C /* UpdateArticleViewController.swift */,
+				60D8402C21C65AF300D2E90C /* AddArticleViewController.swift */,
+				6096A09921C6A23500B12152 /* ArticleDetailViewController.swift */,
+			);
+			path = viewController;
+			sourceTree = "<group>";
+		};
+		608C50AC21C5F9A500DCFFF2 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				60D665BD21C3B9B00062038C /* Main.storyboard */,
+				60D665C221C3B9B10062038C /* LaunchScreen.storyboard */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		608C50AD21C5F9AC00DCFFF2 /* supporting file */ = {
+			isa = PBXGroup;
+			children = (
+				60E8F6CC21C5FE5800E1C674 /* fontawesome-webfont.ttf */,
+				60E8F6CA21C5FCD100E1C674 /* Assets.xcassets */,
+				60D665B921C3B9B00062038C /* AppDelegate.swift */,
+			);
+			path = "supporting file";
+			sourceTree = "<group>";
+		};
+		608C50AE21C5F9CB00DCFFF2 /* custom cell */ = {
+			isa = PBXGroup;
+			children = (
+				608C50AF21C5FA7600DCFFF2 /* CustomCell.swift */,
+				608C50B021C5FA7600DCFFF2 /* CustomCell.xib */,
+			);
+			path = "custom cell";
+			sourceTree = "<group>";
+		};
 		60D665AD21C3B9B00062038C = {
 			isa = PBXGroup;
 			children = (
 				60D665B821C3B9B00062038C /* ArticleManagementiOS */,
 				60D665B721C3B9B00062038C /* Products */,
+				B07350ACF572FE15DB4F297A /* Pods */,
+				5D99262E437AE7E4B8F39BB2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +130,23 @@
 		60D665B821C3B9B00062038C /* ArticleManagementiOS */ = {
 			isa = PBXGroup;
 			children = (
-				60D665B921C3B9B00062038C /* AppDelegate.swift */,
-				60D665BB21C3B9B00062038C /* ViewController.swift */,
-				60D665BD21C3B9B00062038C /* Main.storyboard */,
-				60D665C021C3B9B10062038C /* Assets.xcassets */,
-				60D665C221C3B9B10062038C /* LaunchScreen.storyboard */,
+				608C50AE21C5F9CB00DCFFF2 /* custom cell */,
+				608C50AD21C5F9AC00DCFFF2 /* supporting file */,
+				608C50AC21C5F9A500DCFFF2 /* view */,
+				608C50AB21C5F99B00DCFFF2 /* viewController */,
+				608C50AA21C5F99400DCFFF2 /* model */,
 				60D665C521C3B9B10062038C /* Info.plist */,
 			);
 			path = ArticleManagementiOS;
+			sourceTree = "<group>";
+		};
+		B07350ACF572FE15DB4F297A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3988194B8A6337F9F41F74DF /* Pods-ArticleManagementiOS.debug.xcconfig */,
+				53FFF13185F0680E862A405B /* Pods-ArticleManagementiOS.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +156,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 60D665C821C3B9B10062038C /* Build configuration list for PBXNativeTarget "ArticleManagementiOS" */;
 			buildPhases = (
+				D2DB5DE0749FB3AC35429969 /* [CP] Check Pods Manifest.lock */,
 				60D665B221C3B9B00062038C /* Sources */,
 				60D665B321C3B9B00062038C /* Frameworks */,
 				60D665B421C3B9B00062038C /* Resources */,
+				83E26CFC1F4FD0A35ED03961 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,20 +210,80 @@
 			buildActionMask = 2147483647;
 			files = (
 				60D665C421C3B9B10062038C /* LaunchScreen.storyboard in Resources */,
-				60D665C121C3B9B10062038C /* Assets.xcassets in Resources */,
+				608C50B221C5FA7600DCFFF2 /* CustomCell.xib in Resources */,
+				60E8F6CD21C5FE5800E1C674 /* fontawesome-webfont.ttf in Resources */,
+				60E8F6CB21C5FCD100E1C674 /* Assets.xcassets in Resources */,
 				60D665BF21C3B9B00062038C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		83E26CFC1F4FD0A35ED03961 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ArticleManagementiOS/Pods-ArticleManagementiOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ArticleManagementiOS/Pods-ArticleManagementiOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2DB5DE0749FB3AC35429969 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ArticleManagementiOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		60D665B221C3B9B00062038C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60E8F6CF21C60BC600E1C674 /* Article.swift in Sources */,
 				60D665BC21C3B9B00062038C /* ViewController.swift in Sources */,
+				608C50B121C5FA7600DCFFF2 /* CustomCell.swift in Sources */,
+				6096A09A21C6A23500B12152 /* ArticleDetailViewController.swift in Sources */,
 				60D665BA21C3B9B00062038C /* AppDelegate.swift in Sources */,
+				60D8402B21C6579800D2E90C /* UpdateArticleViewController.swift in Sources */,
+				60D8402D21C65AF300D2E90C /* AddArticleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +427,7 @@
 		};
 		60D665C921C3B9B10062038C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3988194B8A6337F9F41F74DF /* Pods-ArticleManagementiOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +446,7 @@
 		};
 		60D665CA21C3B9B10062038C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53FFF13185F0680E862A405B /* Pods-ArticleManagementiOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
