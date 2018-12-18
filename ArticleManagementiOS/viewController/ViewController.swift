@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     var articles = [Article]()
     var pagination = 1
     let loader = UIRefreshControl()
+    let randomAuthor = ["Charlie","Justini","Shawnie","Mileyes","Passeng","Maroon5"]
     @IBOutlet weak var articleTableView: UITableView!
     let headers = ["Authorization" : "Basic QU1TQVBJQURNSU46QU1TQVBJUEBTU1dPUkQ="]
 
@@ -29,10 +30,6 @@ class ViewController: UIViewController {
         articleTableView.refreshControl = loader
         loader.addTarget(self, action: #selector(reloadArticle), for: .valueChanged)
         nibRegister()
-        let b = AddArticleViewController()
-        for _ in 1...3 {
-            b.postDataDemo()
-        }
     }
 
     //Reload data when drag down
@@ -94,7 +91,7 @@ extension ViewController : UITableViewDataSource, UITableViewDelegate {
         let reusableCell = tableView.dequeueReusableCell(withIdentifier: "reusableCell", for: indexPath) as! CustomCell
         reusableCell.title.text = (!articles[indexPath.row].title.isEmpty) ?articles[indexPath.row].title : "No title"
         reusableCell.createDate.text = articles[indexPath.row].createdDate.toDate()
-        reusableCell.authorName.text = "Chalie Puth"
+        reusableCell.authorName.text = randomAuthor[Int.random(in: 0...randomAuthor.count-1)]
         reusableCell.viewAmount.text = String(Int.random(in: 0...1000))
         reusableCell.likeAmount.text = String(Int.random(in: 0...1000))
         reusableCell.shareAmount.text = String(Int.random(in: 0...1000))

@@ -10,7 +10,7 @@ import UIKit
 
 class ArticleDetailViewController: UIViewController {
     static var article : Article!
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UITextView!
     @IBOutlet  weak var titleLabel: UILabel!
     @IBOutlet weak var image: UIImageView!
 
