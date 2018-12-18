@@ -14,6 +14,7 @@ class Article : Mappable {
     var createdDate : String!
     var imageUrl : String!
     var description : String!
+    var author : String!
 
     required init?(map: Map) {
 
@@ -25,6 +26,7 @@ class Article : Mappable {
         self.createdDate <- map["CREATED_DATE"]
         self.imageUrl <- map["IMAGE"]
         self.description <- map["DESCRIPTION"]
+        self.author <- map["AUTHOR"]["NAME"]
     }
 
 

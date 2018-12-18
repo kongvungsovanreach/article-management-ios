@@ -8,6 +8,7 @@ target 'ArticleManagementiOS' do
 	pod 'SwiftyJSON', '~> 4.0'
 	pod 'ObjectMapper', '~> 3.4'
 	pod 'Kingfisher', '~> 5.0'
+	pod 'KVLoading', '~> 1.7'
 
   # Pods for ArticleManagementiOS
 

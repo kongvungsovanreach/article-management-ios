@@ -15,6 +15,7 @@ class AddArticleViewController: UIViewController {
     @IBOutlet weak var imagePicker: UIButton!
     @IBOutlet weak var imageView: UIImageView!
     var image : UIImage!
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -29,18 +30,31 @@ class AddArticleViewController: UIViewController {
         }))
         alert.addAction(UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
-
     }
 
-    
+    //Save button handler
     @IBAction func saveButtonTap(_ sender: Any) {
         saveArticle()
         self.navigationController?.popToRootViewController(animated: true)
     }
 
+    //Save function to save article to API
     func saveArticle() {
-        uploadImage(image: image!)
+        if let image = image {
+            uploadImage(image: image)
+        }else {
+            let noImage = UIAlertController(title: "Article must has an image!!", message: nil, preferredStyle: .alert)
+            noImage.addAction(UIAlertAction(title: "OK", style: .destructive, handler: nil))
+            self.present(noImage, animated: true, completion: nil)
+        }
+        if (titleTextField.text?.isEmpty)! {
+            let noImage = UIAlertController(title: "Article must has an title!!", message: nil, preferredStyle: .alert)
+            noImage.addAction(UIAlertAction(title: "OK", style: .destructive, handler: nil))
+            self.present(noImage, animated: true, completion: nil)
+        }
     }
+
+    //Open camera
     func openCamera()
     {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera) {
@@ -51,14 +65,14 @@ class AddArticleViewController: UIViewController {
             print("here")
             self.present(imagePicker, animated: true, completion: nil)
         }
-        else
-        {
+        else {
             let alert  = UIAlertController(title: "Warning", message: "You don't have camera", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
     }
 
+    //Open gallery
     func openGallery()
     {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary){
@@ -68,8 +82,7 @@ class AddArticleViewController: UIViewController {
             imagePicker.sourceType = UIImagePickerController.SourceType.photoLibrary
             self.present(imagePicker, animated: true, completion: nil)
         }
-        else
-        {
+        else {
             let alert  = UIAlertController(title: "Warning", message: "You don't have perission to access gallery.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
@@ -124,4 +137,37 @@ extension AddArticleViewController : UIImagePickerControllerDelegate,UINavigatio
         }
         picker.dismiss(animated: true, completion: nil)
     }
+
+    func postDataDemo()  {
+
+        let parameters: Parameters = [
+            "TITLE": self.randomString(),
+            "DESCRIPTION": self.randomString(),
+            "AUTHOR": 1,
+            "CATEGORY_ID": 2,
+            "STATUS": "true",
+            "IMAGE": "https://images-na.ssl-images-amazon.com/images/I/4193lkt1F5L.jpg"
+        ]
+        let uploadUrl = "http://www.api-ams.me/v1/api/articles"
+        let headers: HTTPHeaders = [
+            "Authorization": "Basic QU1TQVBJQURNSU46QU1TQVBJUEBTU1dPUkQ=",
+            "Accept": "application/json"
+        ]
+        Alamofire.request(uploadUrl, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers:headers ).responseData { ( response) in
+            guard response.result.isSuccess,let _ = response.result.value else {
+                print("Error while fetching: \(String(describing: response.result.error))")
+                return
+            }
+        }
+
+    }
+
+    func randomString() -> String {
+        let smallLetter = "bcdfghjklmnpqrstvwxyz"
+        let capitalLetter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        let vowel = "aeiou"
+        return "\(String((0...0).map{ _ in capitalLetter.randomElement()! }))\(String((0...0).map{ _ in vowel.randomElement()! }))\(String((0...1).map{ _ in smallLetter.randomElement()! }))\(String((0...0).map{ _ in vowel.randomElement()! }))"
+    }
 }
+
+

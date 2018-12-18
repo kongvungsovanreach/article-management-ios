@@ -11,6 +11,7 @@ import Alamofire
 import SwiftyJSON
 import ObjectMapper
 import Kingfisher
+import KVLoading
 
 class ViewController: UIViewController {
     var articles = [Article]()
@@ -18,6 +19,7 @@ class ViewController: UIViewController {
     let loader = UIRefreshControl()
     @IBOutlet weak var articleTableView: UITableView!
     let headers = ["Authorization" : "Basic QU1TQVBJQURNSU46QU1TQVBJUEBTU1dPUkQ="]
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +29,13 @@ class ViewController: UIViewController {
         articleTableView.refreshControl = loader
         loader.addTarget(self, action: #selector(reloadArticle), for: .valueChanged)
         nibRegister()
+        let b = AddArticleViewController()
+        for _ in 1...3 {
+            b.postDataDemo()
+        }
     }
 
+    //Reload data when drag down
     @objc func reloadArticle() {
         articles.removeAll()
         pagination = 1
@@ -37,6 +44,7 @@ class ViewController: UIViewController {
         loader.endRefreshing()
     }
 
+    // Fetch the article from API
     func getArticles(page : Int){
         let url = "http://ams.chhaileng.com/v1/api/articles?page=\(page)&limit=15"
             Alamofire.request(url, method: .get, parameters: nil, headers: headers ).responseJSON { ( response) in
@@ -59,20 +67,19 @@ class ViewController: UIViewController {
                 }
     }
 
+    // Register nib file to use in table cell
     func nibRegister() {
         let nib = UINib(nibName: "CustomCell", bundle: nil)
         articleTableView.register(nib, forCellReuseIdentifier: "reusableCell")
     }
 
+    //Delete article from API, table, array
     func deleteArticle(id : Int) {
         let url = "http://ams.chhaileng.com/v1/api/articles/\(id)"
         Alamofire.request(url, method: .delete, parameters: nil, headers: headers )
+    }
 
-//                DispatchQueue.main.async{
-//                    self.articleTableView.reloadData()
-        }
-
-    
+    //Add new article button tap
     @IBAction func addButtonTap(_ sender: Any) {
         self.performSegue(withIdentifier: "add", sender: self)
     }
@@ -85,9 +92,9 @@ extension ViewController : UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let reusableCell = tableView.dequeueReusableCell(withIdentifier: "reusableCell", for: indexPath) as! CustomCell
-        reusableCell.title.text = articles[indexPath.row].title ?? "No title"
+        reusableCell.title.text = (!articles[indexPath.row].title.isEmpty) ?articles[indexPath.row].title : "No title"
         reusableCell.createDate.text = articles[indexPath.row].createdDate.toDate()
-        reusableCell.authorName.text = String(articles[indexPath.row].id)
+        reusableCell.authorName.text = "Chalie Puth"
         reusableCell.viewAmount.text = String(Int.random(in: 0...1000))
         reusableCell.likeAmount.text = String(Int.random(in: 0...1000))
         reusableCell.shareAmount.text = String(Int.random(in: 0...1000))
@@ -111,18 +118,7 @@ extension ViewController : UITableViewDataSource, UITableViewDelegate {
             articleTableView.insertRows(at: [indexPath], with: .fade)
         }
     }
-//
-//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-//        let id = articles[indexPath.row].id
-//        if editingStyle == .delete {
-//            deleteArticle(id: id!)
-//            articles.remove(at: indexPath.row)
-//            articleTableView.deleteRows(at: [indexPath], with: .fade)
-//        }
-//    }
-//    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-//        return true
-//    }
+
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration?
     {
         let deleteAction = UIContextualAction(style: .destructive, title: "🗑" ) { (action, view, handler) in
@@ -151,7 +147,6 @@ extension ViewController : UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("jajhaja")
         ArticleDetailViewController.article = articles[indexPath.row]
         self.performSegue(withIdentifier: "detail", sender: self)
 
