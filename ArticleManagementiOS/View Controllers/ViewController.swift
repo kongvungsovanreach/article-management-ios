@@ -28,10 +28,6 @@ class ViewController: UIViewController {
         basicConfig()
         articlePresenter?.getArticles(page: pagination)
         nibRegister()
-//       let b =  AddArticleViewController()
-//        for _ in 0...100 {
-//            b.postDataDemo()
-//        }
     }
 
     func basicConfig() {
