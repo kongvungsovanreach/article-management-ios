@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0FE0AFD8C80462C91133EEB6 /* Pods_ArticleManagementiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9B0327828700898A2CD8658 /* Pods_ArticleManagementiOS.framework */; };
+		605590E221D0AA54005F4D8F /* ArticleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605590E121D0AA54005F4D8F /* ArticleService.swift */; };
+		605590E421D0AA8E005F4D8F /* ArticlePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605590E321D0AA8E005F4D8F /* ArticlePresenter.swift */; };
 		608C50B121C5FA7600DCFFF2 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608C50AF21C5FA7600DCFFF2 /* CustomCell.swift */; };
 		608C50B221C5FA7600DCFFF2 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 608C50B021C5FA7600DCFFF2 /* CustomCell.xib */; };
 		6096A09A21C6A23500B12152 /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6096A09921C6A23500B12152 /* ArticleDetailViewController.swift */; };
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		3988194B8A6337F9F41F74DF /* Pods-ArticleManagementiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArticleManagementiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArticleManagementiOS/Pods-ArticleManagementiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		53FFF13185F0680E862A405B /* Pods-ArticleManagementiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArticleManagementiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-ArticleManagementiOS/Pods-ArticleManagementiOS.release.xcconfig"; sourceTree = "<group>"; };
+		605590E121D0AA54005F4D8F /* ArticleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleService.swift; sourceTree = "<group>"; };
+		605590E321D0AA8E005F4D8F /* ArticlePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlePresenter.swift; sourceTree = "<group>"; };
 		608C50AF21C5FA7600DCFFF2 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		608C50B021C5FA7600DCFFF2 /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		6096A09921C6A23500B12152 /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
@@ -62,15 +66,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		608C50AA21C5F99400DCFFF2 /* model */ = {
+		605590DF21D09D5A005F4D8F /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				605590E321D0AA8E005F4D8F /* ArticlePresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		605590E021D09D80005F4D8F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				605590E121D0AA54005F4D8F /* ArticleService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		608C50AA21C5F99400DCFFF2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				60E8F6CE21C60BC600E1C674 /* Article.swift */,
 			);
-			path = model;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		608C50AB21C5F99B00DCFFF2 /* viewController */ = {
+		608C50AB21C5F99B00DCFFF2 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				60D665BB21C3B9B00062038C /* ViewController.swift */,
@@ -78,35 +98,36 @@
 				60D8402C21C65AF300D2E90C /* AddArticleViewController.swift */,
 				6096A09921C6A23500B12152 /* ArticleDetailViewController.swift */,
 			);
-			path = viewController;
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
-		608C50AC21C5F9A500DCFFF2 /* view */ = {
+		608C50AC21C5F9A500DCFFF2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				608C50AE21C5F9CB00DCFFF2 /* Custom Cell */,
 				60D665BD21C3B9B00062038C /* Main.storyboard */,
 				60D665C221C3B9B10062038C /* LaunchScreen.storyboard */,
 			);
-			path = view;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		608C50AD21C5F9AC00DCFFF2 /* supporting file */ = {
+		608C50AD21C5F9AC00DCFFF2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				60E8F6CC21C5FE5800E1C674 /* fontawesome-webfont.ttf */,
 				60E8F6CA21C5FCD100E1C674 /* Assets.xcassets */,
 				60D665B921C3B9B00062038C /* AppDelegate.swift */,
 			);
-			path = "supporting file";
+			path = Resources;
 			sourceTree = "<group>";
 		};
-		608C50AE21C5F9CB00DCFFF2 /* custom cell */ = {
+		608C50AE21C5F9CB00DCFFF2 /* Custom Cell */ = {
 			isa = PBXGroup;
 			children = (
 				608C50AF21C5FA7600DCFFF2 /* CustomCell.swift */,
 				608C50B021C5FA7600DCFFF2 /* CustomCell.xib */,
 			);
-			path = "custom cell";
+			path = "Custom Cell";
 			sourceTree = "<group>";
 		};
 		60D665AD21C3B9B00062038C = {
@@ -130,11 +151,12 @@
 		60D665B821C3B9B00062038C /* ArticleManagementiOS */ = {
 			isa = PBXGroup;
 			children = (
-				608C50AE21C5F9CB00DCFFF2 /* custom cell */,
-				608C50AD21C5F9AC00DCFFF2 /* supporting file */,
-				608C50AC21C5F9A500DCFFF2 /* view */,
-				608C50AB21C5F99B00DCFFF2 /* viewController */,
-				608C50AA21C5F99400DCFFF2 /* model */,
+				605590E021D09D80005F4D8F /* Services */,
+				605590DF21D09D5A005F4D8F /* Presenters */,
+				608C50AD21C5F9AC00DCFFF2 /* Resources */,
+				608C50AC21C5F9A500DCFFF2 /* Views */,
+				608C50AB21C5F99B00DCFFF2 /* View Controllers */,
+				608C50AA21C5F99400DCFFF2 /* Models */,
 				60D665C521C3B9B10062038C /* Info.plist */,
 			);
 			path = ArticleManagementiOS;
@@ -283,7 +305,9 @@
 				60D665BC21C3B9B00062038C /* ViewController.swift in Sources */,
 				608C50B121C5FA7600DCFFF2 /* CustomCell.swift in Sources */,
 				6096A09A21C6A23500B12152 /* ArticleDetailViewController.swift in Sources */,
+				605590E221D0AA54005F4D8F /* ArticleService.swift in Sources */,
 				60D665BA21C3B9B00062038C /* AppDelegate.swift in Sources */,
+				605590E421D0AA8E005F4D8F /* ArticlePresenter.swift in Sources */,
 				60D8402B21C6579800D2E90C /* UpdateArticleViewController.swift in Sources */,
 				60D8402D21C65AF300D2E90C /* AddArticleViewController.swift in Sources */,
 			);
