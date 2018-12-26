@@ -57,6 +57,7 @@ class ArticleService {
             switch result {
             case .success(request: let upload, _ ,  _):
                 upload.responseJSON(completionHandler: { (response) in
+
                     if let data = try? JSONSerialization.jsonObject(with: response.data!, options:[]) as! [String:Any] {
                         let parameters: Parameters = [
                             "TITLE": article.title,

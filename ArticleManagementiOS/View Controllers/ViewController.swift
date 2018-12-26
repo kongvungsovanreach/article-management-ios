@@ -28,6 +28,10 @@ class ViewController: UIViewController {
         basicConfig()
         articlePresenter?.getArticles(page: pagination)
         nibRegister()
+//        let a = AddArticleViewController()
+//        for _ in 0...100 {
+//            a.postDataDemo()
+//        }
     }
 
     func basicConfig() {
@@ -114,6 +118,7 @@ extension ViewController : UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let lastArticle = articles.count - 1
+        print(lastArticle)
         if indexPath.row == lastArticle {
             articlePresenter!.getArticles(page: pagination + 1)
             pagination += 1
