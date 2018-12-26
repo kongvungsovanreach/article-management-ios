@@ -68,7 +68,9 @@ class ViewController: UIViewController {
         reusableCell.likeAmount.text = String(Int.random(in: 0...1000))
         reusableCell.shareAmount.text = String(Int.random(in: 0...1000))
         articles.insert(returnArticle, at: 0)
+        articles.insert(returnArticle, at: 0)
         articleTableView.insertRows(at: [[0,0]], with: .fade)
+        print(articles.count)
     }
 
 //  Reload data when drag down
